@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=Job Tracker
+Comment=Jobtracker Application
+Exec=/usr/bin/php -S localhost:8002 -t /home/rhamilton/apps/JobTracker -d session.save_path="/home/rhamilton/apps/JobTracker/session" 
+Icon=/home/rhamilton/apps/JobTracker/controltower.ico
+Terminal=true
+Categories=Office;
+

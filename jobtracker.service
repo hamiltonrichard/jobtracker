@@ -1,0 +1,15 @@
+[Unit]
+Description=Job Tracker - Your Job Tracker App
+After=network.target
+
+[Service]
+# The command to start the application, extracted from the source [1]
+ExecStart=/usr/bin/php -S 10.0.0.69:8002 -t /home/rhamilton/apps/jobtracker -d session.save_path=/home/rhamilton/apps/controltower/session
+
+# Based on the file paths in the source, the following settings are recommended [1]
+WorkingDirectory=/home/rhamilton/apps/jobtracker
+User=rhamilton
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
